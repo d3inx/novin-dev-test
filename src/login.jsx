@@ -38,7 +38,6 @@ const Login = () => {
       .then((Data) => Data.json())
       .then((Response) => {
         setToken(Response.token);
-
         return navigate("/");
       });
   };

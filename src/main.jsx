@@ -1,12 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import {
   RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
 } from "recoil";
 
 import "./index.css";
@@ -14,6 +11,7 @@ import "./index.css";
 import ErrorPage from "./error-page";
 import App from "./App";
 import Login from "./login";
+import SingleUser from "./singleUser";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +22,11 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "singleUSer",
+    element: <SingleUser />,
     errorElement: <ErrorPage />,
   },
 ]);
