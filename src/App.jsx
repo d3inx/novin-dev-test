@@ -17,6 +17,7 @@ function App() {
   const [token, setToken] = useRecoilState(tokenState);
   const [users, setUsers] = useState();
   useEffect(() => {
+    // if we signed in that'll fetch users if not that do nothing
     if (token) {
       fetch(finalFormEndpoint)
         .then((Data) => Data.json())
@@ -33,7 +34,7 @@ function App() {
   return (
     <div className="container mx-auto">
       <h1>Reactjs Test</h1>
-
+      {/* if we signed in this'll show users if not show login button */}
       {token ? (
         <>
           <div
