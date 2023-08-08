@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import {
   RecoilRoot,
-} from "recoil";
+} from "recoil"; //add recoil to save login information
 
 import "./index.css";
 
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
     element: <SingleUser />,
     errorElement: <ErrorPage />,
   },
-]);
+]); // react router dom for urls
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

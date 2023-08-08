@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Link } from "react-router-dom";
 import Btn from "./components/btn";
 
 const SingleUser = () => {
   const [user, setUser] = useState();
 
+  //fetch our user detail from api
   useEffect(() => {
     fetch("https://reqres.in/api/users/2")
       .then((Data) => Data.json())
       .then((Response) => setUser(Response.data));
   }, []);
+
+
   return (
     <div className="container">
       <div className="w-52 h-52">

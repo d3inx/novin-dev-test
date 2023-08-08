@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LazyLoadImage } from "react-lazy-load-image-component"; // for optimize images
 
 import { Link } from "react-router-dom";
 

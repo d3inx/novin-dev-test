@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 
-import { recoilPersist } from 'recoil-persist'
+import { recoilPersist } from 'recoil-persist' //its an library for recoil which save recoil data to localStorage
 
 const { persistAtom } = recoilPersist()
 

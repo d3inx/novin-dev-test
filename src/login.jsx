@@ -40,10 +40,11 @@ const Login = () => {
         setToken(Response.token);
         return navigate("/");
       });
-  };
+  }; // send data to api and then return response, save token and redirect to home page
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-xs">
+        {/* this is our form for login */}
         <form
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
           action={FORM_ENDPOINT}

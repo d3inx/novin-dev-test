@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 const Btn = (props) => {
     const {route, text} = props
   return (
