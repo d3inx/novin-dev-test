@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
+import Btn from "./components/btn";
 
 const SingleUser = () => {
   const [user, setUser] = useState();
@@ -11,7 +12,6 @@ const SingleUser = () => {
       .then((Data) => Data.json())
       .then((Response) => setUser(Response.data));
   }, []);
-  console.log(user);
   return (
     <div className="container">
       <div className="w-52 h-52">
@@ -29,12 +29,7 @@ const SingleUser = () => {
           <li className="my-2">Email: {user?.email}</li>
         </ul>
       </div>
-      <Link
-            to={"/"}
-            className="w-32 h-12 flex items-center justify-center text-xl bg-slate-50 text-slate-900 rounded-xl cursor-pointer"
-          >
-            Home
-          </Link>
+      <Btn route='/' text='Home' />
     </div>
   );
 };
