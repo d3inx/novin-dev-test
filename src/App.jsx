@@ -49,9 +49,9 @@ function App() {
                   to={"singleUser"}
                   className="flex flex-row my-5 bg-slate-50 rounded-3xl overflow-hidden"
                 >
-                  <div className="w-1/3">
+                  <div className="w-1/3 h-40">
                     <LazyLoadImage
-                      className="w-full h-full shadow-md object-fill"
+                      className="w-full h-full shadow-md object-cover"
                       width="150px"
                       height="150px"
                       src={user?.avatar}
